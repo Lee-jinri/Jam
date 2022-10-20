@@ -16,17 +16,10 @@
 	<resources mapping="/resources/**" location="/resources/" />
 	<resources mapping="/uploadStorage/**" location="C:/uploadStorage/" />
 	<!-- <resources mapping="/매핑명/**" loaction="실제 파일을 업로드할 경로 지정" /> -->
-
-	<!-- Resolves views selected for rendering by @Controllers to .jsp resources in the /WEB-INF/views directory
-	<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-		<beans:property name="prefix" value="/WEB-INF/views/" />
-		<beans:property name="suffix" value=".jsp" />
-	</beans:bean>
-	--> 
 	
 	<context:component-scan base-package="com.jam.**" />
 	
-	<!-- 타일즈(tiles) 설정 - ViewResolver는 타일즈 설정을 통해서, 설정파일에 존재하지 않으면 우선순위 2로 -->
+	<!-- 타일즈(tiles) 설정 -->
 	<beans:bean id="tilesConfigurer" class="org.springframework.web.servlet.view.tiles3.TilesConfigurer">
 		<beans:property name="definitions">
 			<beans:list>
